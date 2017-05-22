@@ -1,0 +1,33 @@
+{
+  "name": "node_vue",
+  "version": "1.0.0",
+  "description": "\"node+vue测试项目\"",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack"
+  },
+  "author": "赵一鸣",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "latest",
+    "babel-loader": "latest",
+    "babel-preset-es2015": "latest",
+    "body-parser": "latest",
+    "crypto": "0.0.3",
+    "css-loader": "latest",
+    "ejs": "^2.5.6",
+    "express": "^4.15.3",
+    "file-loader": "latest",
+    "jquery": "latest",
+    "mysql": "^2.13.0",
+    "style-loader": "latest",
+    "vue": "latest",
+    "vue-loader": "latest",
+    "vue-resource": "latest",
+    "vue-router": "latest",
+    "vue-template-compiler": "latest",
+    "vuex": "^2.3.1",
+    "webpack": "latest",
+    "webpack-dev-server": "latest"
+  }
+}

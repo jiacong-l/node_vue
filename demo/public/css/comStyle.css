@@ -1,0 +1,13 @@
+/**
+ * Description:公共样式
+ * User: 赵一鸣
+ * Date: 2017/5/21
+ */
+
+*{margin:0px;padding:0px;}
+li{list-style:none;}
+a{text-decoration:none;}
+img{border:none;}
+
+/*表格*/
+td{height:30px;line-height:30px;text-align:center;padding:0 10px;border:1px solid #ccc;}
