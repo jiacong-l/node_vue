@@ -14,6 +14,9 @@ router.get('/', function(req, res){
             userList : data
         });
     });
+    db('select * from blog_node', function(error, data){
+        console.log(data);
+    });
 
 });
 

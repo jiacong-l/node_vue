@@ -9,13 +9,13 @@ var express = require('express');//引入express模块
 var app = express();//初始化express
 var bodyParse = require('body-parser');//接收post数据
 
-//设置前端模板目录
-app.set('views', __dirname + '/views/');
+//设置前端模板录
+app.set('views', __dirname + '/src/');
 //设置前端模板文件类型
 app.set('view engine', 'ejs');
 
 //设置静态资源目录
-app.use(express.static(__dirname + '/public/'));
+app.use(express.static(__dirname + '/src/'));
 
 //用来接收post提交的json数据
 app.use(bodyParse.json());
@@ -23,9 +23,9 @@ app.use(bodyParse.json());
 app.use(bodyParse.urlencoded({extended:true}));
 
 //加载路由文件
-app.use('/', require('./server/index').indexRouter);
+app.use(require('./server/index').indexRouter);
 
 //创建服务器
-http.createServer(app).listen(3002);
+http.createServer(app).listen(3006);
 
 console.log('express server is ok');

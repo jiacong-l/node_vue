@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/node_vue.iml" filepath="$PROJECT_DIR$/.idea/node_vue.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../node-webpack-vue/sell-app/.idea/sell-app.iml" filepath="$PROJECT_DIR$/../../node-webpack-vue/sell-app/.idea/sell-app.iml" />
     </modules>
   </component>
 </project>

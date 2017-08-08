@@ -11,7 +11,7 @@ exports.db = function(sql, callback){
         host : 'localhost',
         user : 'root',
         password : '',
-        database : 'node_vue'
+        database : 'blog'
     });
 
     db.connect();
