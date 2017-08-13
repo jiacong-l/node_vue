@@ -8,6 +8,7 @@
 li{list-style:none;}
 a{text-decoration:none;}
 img{border:none;}
+body{font-family: "Courier New"}
 
 /*表格*/
 td{height:30px;line-height:30px;text-align:center;padding:0 10px;border:1px solid #ccc;}

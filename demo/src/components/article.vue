@@ -5,10 +5,6 @@
         <div>姓名：{{uname}}</div>
         <div>密码：{{upwd}}</div>
         <div>邮箱：{{email}}</div>
-        <hr>
-        <h1>{{count}}</h1>
-        <button v-on:click="increment();">增加</button>
-        <button v-on:click="decrement();">减少</button>
     </div>
 </template>
 <script type="text/javascript">
@@ -22,13 +18,6 @@
                 email : ''
             }
         },
-        computed : mapGetters([
-            'count'
-        ]),
-        methods : mapActions([
-            'increment',
-            'decrement'
-        ]),
         mounted : function(){
             var uid = this.$route.params.uid;
             this.$http.post('/article', {uid : uid}, {emulateJSON : true}).then(function(result){

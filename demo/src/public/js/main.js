@@ -4,6 +4,13 @@
  * Date: 2017/5/20
  */
 
+if (module.hot) {
+    // 模块自己就接收更新
+    module.hot.accept();
+    // dispose方法用来定义一个一次性的函数，这个函数会在当前模块被更新之前调用
+}
+
+
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
@@ -13,7 +20,6 @@ import list from '../../components/list.vue'
 import article from '../../components/article.vue'
 import login from '../../components/login.vue'
 import regist from '../../components/regist.vue'
-import store from './store/index.js'
 import loading from '../../myComponents/loading/index.js'
 //import test from '../../components/test.vue'
 let test = r => require.ensure([], () => r(require('../../components/test.vue')), 'group-foo');
@@ -77,7 +83,6 @@ var router = new VueRouter({
 //构建vue实例
 new Vue({
     el : '#app',
-    store : store,
     render : function(createElement){
         return createElement(app);
     },

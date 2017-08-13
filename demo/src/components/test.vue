@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>this is test.vue</h1>
+        <h1>this is test.vue!</h1>
         <hr>
         <customComponent1></customComponent1>
         <hr>

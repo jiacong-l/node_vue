@@ -8,6 +8,25 @@ var http = require('http');
 var express = require('express');//引入express模块
 var app = express();//初始化express
 var bodyParse = require('body-parser');//接收post数据
+var webpack = require('webpack');
+var webpackDevConfig = require('./webpack.config.js');
+var reload = require('reload');
+var webpackDevMiddleware = require('webpack-dev-middleware');
+var webpackHotMiddleware = require('webpack-hot-middleware');
+
+var compiler = webpack(webpackDevConfig);
+
+// attach to the compiler & the server
+app.use(webpackDevMiddleware(compiler, {
+
+    // public path should be the same with webpack config
+    publicPath: webpackDevConfig.output.publicPath,
+    noInfo: true,
+    stats: {
+        colors: true
+    }
+}));
+app.use(webpackHotMiddleware(compiler));
 
 //设置前端模板录
 app.set('views', __dirname + '/src/');
@@ -26,6 +45,11 @@ app.use(bodyParse.urlencoded({extended:true}));
 app.use(require('./server/index').indexRouter);
 
 //创建服务器
-http.createServer(app).listen(3006);
-
-console.log('express server is ok');
+var server = http.createServer(app);
+reload(server, app);
+server.listen(3450, function (error) {
+    if (error) {
+        throw error;
+    }
+    console.log('express server is ok');
+});
