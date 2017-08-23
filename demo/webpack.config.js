@@ -55,7 +55,7 @@ var devConfig = {
             inject: true,  // 允许插件修改哪些内容，包括head与body
             hash: true,  // 为静态资源生成hash值
         }),
-		new webpack.optimize.OccurrenceOrderPlugin(),
+		// new webpack.optimize.OccurrenceOrderPlugin(),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoEmitOnErrorsPlugin()
     ]
